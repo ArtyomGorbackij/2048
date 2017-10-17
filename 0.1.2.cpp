@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     int k;
     char q;
-    int m[4][4] = { { 2,2,2,2 },{ 2,2,2,2 },{ 2,2,2,2 },{ 2,2,2,2 } };
+    int m[4][4] = { { 0,4,0,2 },{ 0,0,0,0 },{ 0,2,0,2 },{ 4,0,0,2 } };
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             cout << m[i][j] << " ";
