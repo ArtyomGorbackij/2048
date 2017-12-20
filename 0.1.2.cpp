@@ -25,8 +25,8 @@ up:cin >> q;
                 for(int j=3;j>0;j--){
                     if(m[i][j]==m[i][j-1]){
                         int a= m[i][j]+m[i][j-1];
-                        m[i][j]=0;
-                        m[i][j-1]=a;
+                        m[i][j]=a;
+                        m[i][j-1]=0;
                     }
                 }
             }
