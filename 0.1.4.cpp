@@ -14,13 +14,16 @@ int main() {
 up:cin >> q;
     switch (q) {
         case 'l':
-             p=0;
-                    for(int i=0;i<4;i++){
-                        for(int j=3;j>0;j--){
-                            if (m[i][j]==0)
-                                swap (m[i][j],m[i][j-1]);
-                        }
+            p=0;
+            while ( p<2){
+                for(int i=0;i<4;i++){
+                    for(int j=3;j>0;j--){
+                        if (m[i][j]==0)
+                            swap (m[i][j],m[i][j-1]);
                     }
+                }
+                p++;
+            }
             for(int i=0;i<4;i++){
                 for(int j=3;j>0;j--){
                     if(m[i][j]==m[i][j-1]){
@@ -30,6 +33,7 @@ up:cin >> q;
                     }
                 }
             }
+            p=0;
             while ( p<2){
                     for(int i=0;i<4;i++){
                         for(int j=3;j>0;j--){
@@ -42,6 +46,7 @@ up:cin >> q;
             break;
         case 'k':
              p=0;
+            while ( p<2){
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 4; j++) {
                         if (m[i][j] == 0) {
@@ -49,6 +54,8 @@ up:cin >> q;
                         }
                     }
                 }
+                p++;
+            }
             for (int i = 0; i < 4; i++) {
                 for (int j = 0; j < 4; j++) {
                     if (m[i][j] == m[i-1][j]) {
@@ -58,6 +65,7 @@ up:cin >> q;
                     }
                 }
             }
+            p=0;
     while ( p<2){
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 4; j++) {
@@ -70,14 +78,17 @@ up:cin >> q;
     }
             break;
         case 'h':
-             p=0;
+            p=0;
+            while ( p<2){
                 for (int i = 0; i < 4; i++) {
                     for (int j = 1; j <4; j++) {
                         if (m[i][j-1] == 0) {
-                            swap(m[i][j],m[i][j-1]);
+                            swap(m[i][j-1],m[i][j]);
                         }
                     }
                 }
+                p++;
+            }
             for (int i = 0; i < 4; i++) {
                 for (int j = 1; j <4; j++) {
                         if(m[i][j]==m[i][j-1]){
@@ -87,6 +98,7 @@ up:cin >> q;
                         }
                     }
                 }
+            p=0;
        while ( p<2){
             for (int i = 0; i < 4; i++) {
                 for (int j = 1; j <4; j++) {
@@ -100,6 +112,7 @@ up:cin >> q;
             break;
         case'j':
             p=0;
+     while ( p<2){
             for (int i = 3; i > 0; i--) {
                 for (int j = 0; j < 4; j++) {
                     if ( m[i][j] == 0 ) {
@@ -107,6 +120,8 @@ up:cin >> q;
                     }
                 }
             }
+            p++;
+    }
             for (int i = 3; i > 0; i--) {
                 for (int j = 0; j < 4; j++) {
                     if (m[i][j] == m[i - 1][j]) {
@@ -116,6 +131,7 @@ up:cin >> q;
                     }
                 }
             }
+            p=0;
         while ( p<2){
             for (int i = 3; i > 0; i--) {
                 for (int j = 0; j < 4; j++) {
